@@ -9,17 +9,20 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
-        try {
-            const response = await axios.post('https://ecommerce-backend-saw5.onrender.com/api/users/login', { email, password });
-            localStorage.setItem('token', response.data.token);
-            alert('Login successful!');
-            navigate('/');
-        } catch (error) {
-            alert('Login failed!');
-        }
-    };
+    e.preventDefault();
+    try {
+        const response = await axios.post('https://ecommerce-backend-saw5.onrender.com/api/users/login', { email, password });
 
+        // Save token and isAdmin to localStorage
+        localStorage.setItem('token', response.data.token);
+        localStorage.setItem('isAdmin', response.data.isAdmin);  // Store the isAdmin status
+
+        alert('Login successful!');
+        navigate('/');
+    } catch (error) {
+        alert('Login failed!');
+    }
+};
     return (
         <div className="container mt-5">
             <h1>Login</h1>
