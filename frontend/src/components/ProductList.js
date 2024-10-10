@@ -8,7 +8,7 @@ const ProductList = () => {
 
     useEffect(() => {
         const fetchProducts = async () => {
-            const response = await axios.get('http://localhost:5000/api/products');
+            const response = await axios.get('https://ecommerce-backend-saw5.onrender.com/api/products');
             setProducts(response.data);
         };
         fetchProducts();
