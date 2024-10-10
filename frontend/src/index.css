@@ -1,0 +1,39 @@
+/* src/index.css */
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+  }
+  
+  /* Navbar custom styles */
+  .navbar {
+    background-color: #007bff;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  .navbar-brand {
+    color: white !important;
+  }
+  
+  /* Card styles */
+  .card {
+    border: 1px solid #ddd;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+  }
+  
