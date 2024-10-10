@@ -1,21 +1,26 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
 
-const PrivateRoute = ({ children, adminOnly }) => {
+const PrivateRoute = ({ children }) => {
     const token = localStorage.getItem('token');
-    const isAdmin = localStorage.getItem('isAdmin') === 'true';  // Get the isAdmin flag
+    const adminToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDc1YmZmNzUzODJlZGM2YjI5Y2RiZCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTcyODU4NDMyMywiZXhwIjoxNzI4NTg3OTIzfQ.ux2-O0xT-rleES4OKsr7BSf51WYbUWVJ5tSWWcJZfKE";
+    console.log(token);
 
-    // If no token is found, redirect to the login page
+    console.log(token===adminToken);
+    console.log(token!==adminToken);
+
+    // If no token is found, redirect to login
     if (!token) {
         return <Navigate to="/login" />;
     }
 
-    // If this route is admin-only but the user is not an admin, redirect to home
-    if (adminOnly && !isAdmin) {
+    // Check if user has admin token
+    if (token !== adminToken) {
+        console.log('hi');
         return <Navigate to="/" />;
     }
 
-    // If all checks pass, render the children components (protected route)
+    // If token matches admin token, allow access
     return children;
 };
 

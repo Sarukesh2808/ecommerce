@@ -16,13 +16,13 @@ const AdminDashboard = () => {
 
     const handleAddProduct = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:5000/api/products', newProduct);
+        await axios.post('https://ecommerce-backend-saw5.onrender.com/api/products', newProduct);
         setNewProduct({ name: '', price: '', stock: '', description: '', imageUrl: '' });
         window.location.reload();
     };
 
     const handleDeleteProduct = async (id) => {
-        await axios.delete(`http://localhost:5000/api/products/${id}`);
+        await axios.delete(`https://ecommerce-backend-saw5.onrender.com/api/products/${id}`);
         window.location.reload();
     };
 
