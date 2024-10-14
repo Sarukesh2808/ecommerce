@@ -88,25 +88,39 @@ Homepage:
 ![{657912F3-B1CB-47B5-9444-BAC63E1AEA7F}](https://github.com/user-attachments/assets/1baeb26f-0023-46bb-8c9f-ae9548c17a70)
 
 
-Product Details: Product description, price, and stock availability.
+Product Details: 
+![{57006E39-ED51-476E-87EF-6882754AF5BD}](https://github.com/user-attachments/assets/480a9cfe-5ff9-4eed-b44b-b6520ad206b6)
 
-Cart Page: Display of selected items in the shopping cart.
 
-Admin Dashboard: Interface for admins to manage products.
+Cart Page: 
+![{A9A9DBFF-0680-4E20-8132-D59487CE0EFB}](https://github.com/user-attachments/assets/660bbcdd-e20d-4aea-88a8-3647a8ccd779)
+
+
+Admin Dashboard: 
+![{4360B21E-A5A8-427E-95B4-8E6970C57D44}](https://github.com/user-attachments/assets/184105da-63a6-4036-b84c-1f2bcb198ac7)
+
+Login page:
+![{045DF7D1-2D9D-4D05-9EFF-62F812044DDD}](https://github.com/user-attachments/assets/10fb8a57-d860-4806-8d07-3d9ff2f713a3)
+
+Register:
+![{054EAB66-E5A7-44F8-9884-892FB4F5FA07}](https://github.com/user-attachments/assets/4255d7dc-ac09-4886-9fe1-73916c74bd9c)
+
 
 Deployment
 Deploying Locally:
 You can deploy the app locally by following the installation and usage steps above. Ensure both frontend and backend are running simultaneously.
 
-Deploying to Render:
-Backend:
+=====Deploying to Render=====
+
+//Backend:
 
 Create a new Web Service on Render and link your GitHub repository.
 Set the root directory to backend.
 Use npm install as the build command.
 Use npm start as the start command.
 Add the environment variable MONGO_URI.
-Frontend:
+
+//Frontend:
 
 Create a new Static Site on Render and link your GitHub repository.
 Set the root directory to frontend.
