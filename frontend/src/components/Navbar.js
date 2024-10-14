@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const cartCount = JSON.parse(localStorage.getItem('cart'))?.length || 0;
+    const isAdmin = JSON.parse(localStorage.getItem('isAdmin')) || false; // Assuming admin status is stored in localStorage
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-dark">
@@ -22,9 +23,11 @@ const Navbar = () => {
                     <li className="nav-item">
                         <Link className="nav-link" to="/signup">Sign Up</Link>
                     </li>
-                    <li className="nav-item">
-                        <Link className="nav-link" to="/admin">Admin Dashboard</Link>
-                    </li>
+                    {isAdmin && (
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/admin">Admin Dashboard</Link>
+                        </li>
+                    )}
                 </ul>
             </div>
         </nav>

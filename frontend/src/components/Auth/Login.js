@@ -16,7 +16,8 @@ const Login = () => {
             // Save token and isAdmin to localStorage
             console.log(response.data);
             localStorage.setItem('token', response.data.token);
-    
+            
+            console.log(response.data.token);
             alert('Login successful!');
             navigate('/');
         } catch (error) {
